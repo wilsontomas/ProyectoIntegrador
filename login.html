@@ -1,0 +1,149 @@
+<html>
+    <head>
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">     
+        <link rel="stylesheet" href="materialize/css/materialize.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>         
+    </head>
+    <body>
+        <div>
+            <!-- Dropdown Structure -->
+            <ul id="dropdown1" class="dropdown-content">
+                <li><a href="login.html">login</a></li>
+                <li><a href="#!">two</a></li>
+                <li class="divider"></li>
+                <li><a href="#!">three</a></li>
+            </ul>
+        <nav>
+            <div class="nav-wrapper deep-purple darken-4">
+            <a href="index.html" class="brand-logo">Logo</a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="about.html">Sobre nosotros</a></li>
+                <li><a href="form.html">Formulario</a></li>
+                <!-- Dropdown Trigger -->
+                <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Opciones<i class="material-icons right">arrow_drop_down</i></a></li>
+            </ul>
+            </div>
+        </nav>
+        </div>
+        <div> <!--side nav-->
+            <ul id="slide-out" class="sidenav">
+                <li><div class="user-view">
+                  <div class="background">
+                    <img src="images/negro.jpg">
+                  </div>
+                  <a href="#user"><img class="circle" src="images/user.png"></a>
+                  <a href="#name"><span class="white-text name">John Doe</span></a>
+                  <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
+                </div></li>
+                <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+                <li><a href="#!">Second Link</a></li>
+                <li><div class="divider"></div></li>
+                <li><a class="subheader">Subheader</a></li>
+                <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+              </ul>
+                        
+
+        </div>
+        <!--boton flotante-->
+        <div class="fixed-action-btn">
+            
+            <a href="#" data-target="slide-out" class="sidenav-trigger btn-floating btn-large red"><i class="material-icons">menu</i></a>
+              
+            
+          </div>
+<br>
+          <div class="container"  >
+            <div class="row">
+                <form class="col s12">
+                  <div class="row">
+                    <div class="input-field col s6">
+                      <input placeholder="Placeholder" id="first_name" type="text" class="validate">
+                      <label for="first_name">First Name</label>
+                    </div>
+                    <div class="input-field col s6">
+                      <input id="last_name" type="text" class="validate">
+                      <label for="last_name">Last Name</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <input id="disabled" type="text" class="validate">
+                      <label for="disabled">Disabled</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <input id="password" type="password" class="validate">
+                      <label for="password">Password</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <input id="email" type="email" class="validate">
+                      <label for="email">Email</label>
+                    </div>
+                  </div>
+                 
+                </form>
+              </div>
+          </div>
+
+          <div>
+            <footer class="page-footer deep-purple darken-4">
+                <div class="container">
+                  <div class="row">
+                    <div class="col l6 s12">
+                      <h5 class="white-text">Informacion</h5>
+                      <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+                    </div>
+                    <div class="col l4 offset-l2 s12">
+                      <h5 class="white-text">Links</h5>
+                      <ul>
+                        <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="footer-copyright deep-purple darken-3">
+                  <div class="container">
+                  © 2021 Copyright Text
+                  <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+                  </div>
+                </div>
+              </footer>
+        </div>
+
+          <!--scripts-->
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="materialize/js/materialize.min.js"></script>
+        <script>
+            $(".dropdown-trigger").dropdown();
+
+            $(document).ready(function(){
+             $('.sidenav').sidenav();
+            });
+
+            document.addEventListener('DOMContentLoaded', function() {
+             var elems = document.querySelectorAll('.fixed-action-btn');
+            var instances = M.FloatingActionButton.init(elems, options);
+            });
+
+            // Or with jQuery
+
+            $(document).ready(function(){
+                $('.fixed-action-btn').floatingActionButton();
+            });
+
+            document.addEventListener('DOMContentLoaded', function() {
+                var elems = document.querySelectorAll('.slider');
+                var instances = M.Slider.init(elems, options);
+            });
+
+           
+        </script>
+    </body>
+</html>
