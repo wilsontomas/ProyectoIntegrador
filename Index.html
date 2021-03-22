@@ -29,6 +29,66 @@
             </div>
         </nav>
         </div>
+        <div> <!--side nav-->
+            <ul id="slide-out" class="sidenav">
+                <li><div class="user-view">
+                  <div class="background">
+                    <img src="images/negro.jpg">
+                  </div>
+                  <a href="#user"><img class="circle" src="images/user.png"></a>
+                  <a href="#name"><span class="white-text name">John Doe</span></a>
+                  <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
+                </div></li>
+                <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+                <li><a href="#!">Second Link</a></li>
+                <li><div class="divider"></div></li>
+                <li><a class="subheader">Subheader</a></li>
+                <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+              </ul>
+                        
+
+        </div>
+        <!--boton flotante-->
+        <div class="fixed-action-btn">
+            
+            <a href="#" data-target="slide-out" class="sidenav-trigger btn-floating btn-large red"><i class="material-icons">menu</i></a>
+              
+            
+          </div>
+
+          <!--slicerd-->
+          <div class="slider">
+            <ul class="slides">
+              <li>
+                <img src="images/aspw.jpg" > <!-- random image -->
+                <div class="caption center-align">
+                  <h3>Aprende ASP.NET ahora</h3>
+                  <h5 class="light grey-text text-lighten-3">Curso personalizado</h5>
+                </div>
+              </li>
+              <li>
+                <img src="images/pythonw.jpg"> <!-- random image -->
+                <div class="caption left-align">
+                  <h3>Aprende Python ahora</h3>
+                  <h5 class="light grey-text text-lighten-3">curso personalizado</h5>
+                </div>
+              </li>
+              <li>
+                <img src="images/phpw.jpg"> <!-- random image -->
+                <div class="caption right-align">
+                  <h3>Aprende PHP ahora</h3>
+                  <h5 class="light grey-text text-lighten-3">Curso</h5>
+                </div>
+              </li>
+              <li>
+                <img src="images/jsw.png"> <!-- random image -->
+                <div class="caption center-align">
+                  <h3>Aprende Javascript ahora</h3>
+                  <h5 class="light grey-text text-lighten-3">Curso</h5>
+                </div>
+              </li>
+            </ul>
+          </div>
         <div class="container">
             <h4>Lista de cursos</h4>
             <br>
@@ -200,6 +260,31 @@
         <script>
             $(".dropdown-trigger").dropdown();
 
+            $(document).ready(function(){
+             $('.sidenav').sidenav();
+            });
+
+            document.addEventListener('DOMContentLoaded', function() {
+             var elems = document.querySelectorAll('.fixed-action-btn');
+            var instances = M.FloatingActionButton.init(elems, options);
+            });
+
+            // Or with jQuery
+
+            $(document).ready(function(){
+                $('.fixed-action-btn').floatingActionButton();
+            });
+
+            document.addEventListener('DOMContentLoaded', function() {
+                var elems = document.querySelectorAll('.slider');
+                var instances = M.Slider.init(elems, options);
+            });
+
+            // Or with jQuery
+
+            $(document).ready(function(){
+                $('.slider').slider();
+            });
         </script>
         
 
